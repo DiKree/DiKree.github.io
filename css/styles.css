@@ -16,7 +16,14 @@ h1, h2 {
     margin: 0;
 }
 
-.about, .games, footer {
+.about {
+    padding: 20px;
+    text-align: center; /* Центровка текста */
+    max-width: 800px; /* Ограничение ширины */
+    margin: 0 auto; /* Центровка блока по горизонтали */
+}
+
+.games, footer {
     padding: 20px;
 }
 
