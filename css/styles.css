@@ -1,78 +1,56 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 20px;
 }
 
 header {
-    background-color: #333;
+    background: #4CAF50;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px;
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+h1, h2 {
+    margin: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+.about, .games, footer {
+    padding: 20px;
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
+.game-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    width: calc(33% - 40px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.section {
-    margin: 20px 0;
-}
-
-.game {
-    margin: 15px 0;
+.game-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
 }
 
 footer {
+    background: #f1f1f1;
     text-align: center;
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
+    padding: 20px;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    nav ul li {
-        display: block;
-        margin: 5px 0;
-    }
-
-    .section {
-        padding: 15px;
+    .game-card {
+        width: calc(50% - 40px);
     }
 }
 
 @media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem;
-    }
-
-    .section {
-        font-size: 0.9rem;
+    .game-card {
+        width: 100%;
     }
 }
