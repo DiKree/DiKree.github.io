@@ -1,7 +1,6 @@
 let slideIndexes = [1, 1];
-let slideId = ["slides1", "slides2"]; // Уникальные ID для каждого слайд-шоу
+let slideId = ["slides1", "slides2"]; 
 
-// Инициализация слайдов
 showSlides(1, 0);
 showSlides(1, 1);
 
