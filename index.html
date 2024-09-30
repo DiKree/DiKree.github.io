@@ -1,59 +1,82 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Larian Studios</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
-        <img src="https://avatars.dzeninfra.ru/get-zen_doc/1593343/pub_5fdc7e3c7200780de1d94f23_5fdc7e917c919e46c0037205/scale_1200"> <!-- Логотип компании -->
+        <img src="https://yt3.googleusercontent.com/Ysu-DVdWHV_MznQ7WwivHXNt-dZPTMLnO9Nl-LyMGAuphDB-r43jUibnBNFXOxhnLpr-shiKoA=s900-c-k-c0x00ffffff-no-rj"> <!-- Логотип компании -->
         <h1>Larian Studios</h1>
-        <h2>Разработчик известных ролевых игр.</h2>
+        <h2>Разработчик известных ролевых игр</h2>
     </header>
 
-    <section class="about">
-        <h3>О компании</h3>
-        <p>Larian Studios — это разработчик, известный своими ролевыми играми, такими как Divinity: Original Sin и Baldur's Gate 3. Компания была основана в 1996 году и с тех пор добилась значительных успехов в игровой индустрии, получив множество наград за свои проекты.</p>
+    <!-- О компании -->
+    <section id="about">
+        <h2>О компании</h2>
+        <p>
+            Larian Studios — это бельгийская компания, специализирующаяся на создании захватывающих ролевых игр.
+            С их успешными проектами, такими как Divinity: Original Sin и Baldur's Gate III, они завоевали сердца игроков по всему миру.
+        </p>
     </section>
 
-   <section class="games">
-    <h3>Наши игры</h3>
-    <div class="game-card">
-        <div class="slideshow-container" id="slideshow1">
-            <div class="mySlides1 fade">
-                    <img src="https://avatars.mds.yandex.net/get-marketpic/1530482/pic2702b2b8a8a0929baba4256ca2c9af00/orig" alt="Divinity: Original Sin 2">
+    <!-- Наши игры -->
+    <section id="games">
+        <h2>Наши игры</h2>
+        <div class="games-container">
+            <div class="game-card">
+                <div class="slideshow-container">
+                    <!-- Слайд-шоу для первой игры -->
+                    <div class="mySlides fade">
+                        <img src="https://avatars.mds.yandex.net/get-marketpic/1530482/pic2702b2b8a8a0929baba4256ca2c9af00/orig">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://steamuserimages-a.akamaihd.net/ugc/1815520471653985524/93EEDB23185D47752EC1602CAF71A80FD2DD922B/?imw=512&amp;imh=288&amp;ima=fit&amp;impolicy=Letterbox&amp;imcolor=%23000000&amp;letterbox=true">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://avatars.mds.yandex.net/i?id=e6e0564fa7c819e25c7dd413c69b93be_l-10555755-images-thumbs&n=13">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-                <div class="mySlides fade">
-                    <img src="https://www.hi-fi.ru/upload/iblock/caa/caab961838d3b40ce42bbdb91afd19d1.jpg">
+                <h3>Divinity: Original Sin</h3>
+                <p>Описание Divinity: Original Sin, одна из лучших RPG.</p>
+                <a href="https://divinity.game/">Перейти на сайт</a>
+            </div>
+
+            <div class="game-card">
+                <div class="slideshow-container">
+                    <!-- Слайд-шоу для второй игры -->
+                    <div class="mySlides fade">
+                        <img src="https://cdn.akamai.steamstatic.com/steam/apps/1086940/hero_capsule.jpg?t=1703250718">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://avatars.mds.yandex.net/i?id=147e422485b20ab72e77a648e2dd77d4_l-4428821-images-thumbs&n=13">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="https://i.playground.ru/i/pix/3101666/image.jpg">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+                <h3>Baldur's Gate III</h3>
+                <p>Описание Baldur's Gate III, легендарная RPG-серия возвращается.</p>
+                <a href="https://baldursgate3.game/">Перейти на сайт</a>
+            </div>
         </div>
-        <h4>Divinity: Original Sin 2</h4>
-            <p>Эпическая ролевая игра, полная приключений и тактических боёв.</p>
-            <a href="https://divinity.game/">Узнать больше</a>
-        </div>
-        <<div class="game-card">
-        <div class="slideshow-container" id="slideshow2">
-            <div class="mySlides2 fade">
-                    <img src="https://habrastorage.org/webt/f7/ng/pm/f7ngpmgiygd_7z7v0zeo-zvrxrg.jpeg">
-                </div>
-                <div class="mySlides fade">
-                    <img src="https://cdna.artstation.com/p/assets/covers/images/031/046/996/large/tamara-de-schepper-tamara-de-schepper-fd1c-baldur-s-gate-iii-a-release-planned-for-2020.jpg?1602439624">
-                </div>
-            <a class="prev" onclick="plusSlides(-1, 2)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, 2)">&#10095;</a>
-        </div>
-        <h4>Baldur's Gate 3</h4>
-            <p>Продолжение классической серии ролевых игр с глубокой сюжетной линией.</p>
-            <a href="https://baldursgate3.game/">Узнать больше</a>
-        </div>
-        <!-- Добавьте дополнительные карточки игр здесь -->
     </section>
 
+    <!-- Контакты -->
     <footer>
+        <p>Контакты: info@larian.com | Телефон: +32 123 456 789</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
         <h3>Контакты</h3>
         <p>Связаться с нами можно по адресу: <a href="mailto:contact@larian.com">contact@larian.com</a></p>
     </footer>
