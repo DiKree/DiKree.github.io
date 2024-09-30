@@ -70,45 +70,42 @@ footer {
 }
 
 .slideshow-container {
-    position: relative; /* Относительное позиционирование для навигации */
-    max-width: 100%; /* Максимальная ширина для адаптивности */
-    margin: auto; /* Центрирование слайд-шоу */
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    height: 300px; /* Задаём фиксированную высоту для контейнера */
+}
+
+.slideshow-container img {
+    width: 100%; /* Ширина изображения подстраивается под контейнер */
+    height: 100%; /* Изображение растягивается по высоте контейнера */
+    object-fit: cover; /* Изображение будет обрезаться по краям, чтобы сохранить соотношение сторон */
 }
 
 .mySlides {
-    display: none; /* Изначально скрыть слайды */
+    display: none;
 }
 
-.mySlides img {
-    width: 100%; /* Ширина изображений */
-    height: auto; /* Автоматическая высота */
-}
-
-/* Стиль для навигации */
 .prev, .next {
-    cursor: pointer; /* Указатель при наведении */
+    cursor: pointer;
     position: absolute;
     top: 50%;
-    width: auto;
     padding: 16px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
     user-select: none;
 }
 
 .prev {
     left: 0;
-    border-radius: 3px 0 0 3px;
 }
 
 .next {
     right: 0;
-    border-radius: 3px 0 0 3px;
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8); /* Затемнение при наведении */
+    background-color: rgba(0,0,0,0.8);
 }
