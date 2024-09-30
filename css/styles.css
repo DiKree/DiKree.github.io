@@ -1,156 +1,127 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Общие стили для всего сайта */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
     background-color: #f4f4f4;
-    padding: 20px;
-}
-
-header {
     text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
-    position: relative;
-}
-
-header img {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 50px;
-    width: auto;
 }
 
 h1 {
-    margin-bottom: 20px;
-    font-size: 3em;
+    margin: 20px 0;
+    font-size: 36px;
+    color: #333;
 }
 
 h2 {
-    color: #555;
+    font-size: 28px;
+    margin-bottom: 20px;
 }
 
-/* Секция "О компании" */
-section#about {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-section#about p {
-    font-size: 1.2em;
-    max-width: 800px;
+.container {
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-/* Секция с играми */
-.games-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.game-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
     padding: 20px;
-    text-align: center;
 }
 
-.game-card img {
+p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Стили для карточек игр */
+.card {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-}
-
-.game-card h3 {
-    margin: 15px 0;
-    font-size: 1.5em;
-}
-
-.game-card p {
-    font-size: 1em;
-    color: #777;
-}
-
-.game-card a {
+    max-width: 400px; /* Фиксируем максимальную ширину для каждой карточки */
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
     display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background-color: #007BFF;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+    vertical-align: top;
 }
 
-.game-card a:hover {
+/* Заголовки и текст в карточках */
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Кнопка для перехода на сайт */
+.button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
     background-color: #0056b3;
 }
 
-/* Контакты */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-}
-
-/* Слайд-шоу */
+/* Стили для слайд-шоу */
 .slideshow-container {
     position: relative;
     max-width: 100%;
     margin: auto;
-    height: 300px; /* Задаём фиксированную высоту для контейнера */
+    height: 300px; /* Фиксированная высота для слайд-шоу */
 }
 
 .slideshow-container img {
     width: 100%;
-    height: 100%; /* Изображение растягивается по высоте контейнера */
-    object-fit: cover; /* Изображение будет обрезаться по краям, чтобы сохранить соотношение сторон */
+    height: 300px; /* Фиксированная высота для слайдов */
+    object-fit: cover; /* Обрезаем изображение, сохраняя пропорции */
 }
 
 .mySlides {
-    display: none;
+    display: none; /* Изначально скрываем слайды */
 }
 
-/* Стиль для навигации */
+/* Кнопки навигации слайдов */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
-    padding: 16px;
+    padding: 10px;
     color: white;
     font-weight: bold;
-    font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
 }
 
-.next {
-    right: 0;
+.prev {
+    left: 0;
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
 }
 
-/* Точки-индикаторы */
+/* Указываем фиксированные размеры для кнопок, чтобы они оставались одинаковыми */
+.prev, .next {
+    width: 40px;
+    height: 40px;
+}
+
+/* Индикаторы для слайдов */
 .dot {
     cursor: pointer;
     height: 15px;
@@ -166,39 +137,34 @@ footer {
     background-color: #717171;
 }
 
-/* Анимация слайдов */
+/* Анимация для переходов между слайдами */
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from { opacity: 0.4 }
-    to { opacity: 1 }
+    from {opacity: 0.4;}
+    to {opacity: 1;}
 }
 
-/* Адаптивность для мобильных устройств */
-@media screen and (max-width: 768px) {
-    .game-card {
-        width: 100%;
+/* Дополнительные стили для мобильных устройств */
+@media screen and (max-width: 600px) {
+    .card {
+        width: 90%;
+        margin: 10px auto;
+    }
+    
+    .slideshow-container {
+        height: 200px; /* Уменьшаем высоту слайдов на мобильных устройствах */
     }
 
-    h1 {
-        font-size: 2.5em;
+    .slideshow-container img {
+        height: 200px; /* Уменьшаем высоту изображений слайдов */
     }
 
-    h2 {
-        font-size: 1.5em;
+    .prev, .next {
+        width: 30px;
+        height: 30px;
     }
-
-    p {
-        font-size: 1em;
-    }
-}
-
-/* Дополнительные стили */
-.slideshow {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
