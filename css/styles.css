@@ -16,6 +16,7 @@ header {
 
 .logo-container {
     text-align: center; /* Центрируем логотип */
+    width: 300px;
     margin: 20px 0; /* Отступы сверху и снизу */
 }
 
